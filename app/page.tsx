@@ -11,6 +11,9 @@ import {
   BarChart3,
   Sparkles,
   Shield,
+  Clock,
+  Users,
+  Zap,
 } from 'lucide-react';
 
 export default function LandingPage() {
@@ -81,8 +84,8 @@ export default function LandingPage() {
               lineHeight: 1.1,
               letterSpacing: '-0.03em'
             }}>
-              Trouvez vos prochains clients<br />
-              <span className="text-gradient">pendant que vous dormez.</span>
+              Générez des leads qualifiés<br />
+              <span className="text-gradient">pendant que vous vendez.</span>
             </h1>
 
             {/* Subheadline */}
@@ -93,8 +96,8 @@ export default function LandingPage() {
               margin: '0 auto 2.5rem',
               lineHeight: 1.6
             }}>
-              Hubsy trouve, enrichit et synchronise vos prospects B2B automatiquement.
-              Plus de copier-coller. Plus de fichiers Excel. Juste des leads qualifiés dans votre CRM.
+              Hubsy trouve vos prospects idéaux, enrichit leurs emails et les envoie dans votre CRM.
+              Automatiquement. Vous n&apos;avez plus qu&apos;à closer.
             </p>
 
             {/* CTAs */}
@@ -118,8 +121,8 @@ export default function LandingPage() {
             }}>
               {[
                 { value: '10x', label: 'Plus rapide' },
-                { value: '95%', label: 'Emails vérifiés' },
-                { value: '0€', label: 'Pour démarrer' },
+                { value: '95%', label: 'Emails valides' },
+                { value: '0€', label: 'Pour commencer' },
               ].map((stat, i) => (
                 <div key={i} style={{ textAlign: 'center' }}>
                   <div className="stat-number">{stat.value}</div>
@@ -131,8 +134,102 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Social Proof */}
+      <section style={{ padding: '3rem 0', borderTop: '1px solid #1e293b', borderBottom: '1px solid #1e293b' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
+          <p style={{ textAlign: 'center', color: '#64748b', fontSize: '0.875rem', marginBottom: '1.5rem' }}>
+            Utilisé par les équipes commerciales de startups en croissance
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem', alignItems: 'center', flexWrap: 'wrap', opacity: 0.5 }}>
+            {['SaaS Co.', 'Growth Agency', 'Tech Startup', 'Sales Team'].map((company, i) => (
+              <span key={i} className="font-display" style={{ fontSize: '1.25rem', color: '#64748b', fontWeight: 600 }}>
+                {company}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Problem/Solution */}
+      <section style={{ padding: '6rem 0' }}>
+        <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
+          <motion.div
+            style={{ textAlign: 'center', marginBottom: '4rem' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white', marginBottom: '1rem' }}>
+              Arrêtez de perdre du temps<br />
+              <span className="text-gradient">sur la prospection manuelle.</span>
+            </h2>
+            <p style={{ color: '#94a3b8', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
+              Vous passez des heures à copier-coller des profils ? À chercher des emails ?
+              À remplir des fichiers Excel ? C&apos;est fini.
+            </p>
+          </motion.div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+            {/* Before */}
+            <motion.div
+              className="glass-card"
+              style={{ borderColor: 'rgba(239, 68, 68, 0.3)' }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div style={{ color: '#ef4444', fontWeight: 600, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <X style={{ width: '20px', height: '20px' }} />
+                Avant Hubsy
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                {[
+                  '3-4 heures/jour de prospection manuelle',
+                  'Copier-coller depuis les réseaux pro',
+                  'Chercher les emails un par un',
+                  'Import manuel dans le CRM',
+                  '30% d\'emails invalides (bounces)',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '1rem', color: '#94a3b8' }}>
+                    <X style={{ width: '16px', height: '16px', color: '#ef4444', flexShrink: 0, marginTop: '4px' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* After */}
+            <motion.div
+              className="glass-card glass-card-featured"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div style={{ color: '#22d3ee', fontWeight: 600, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <Check style={{ width: '20px', height: '20px' }} />
+                Avec Hubsy
+              </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                {[
+                  'Prospection 100% automatisée',
+                  'Extraction en 1 clic de vos cibles',
+                  'Emails enrichis et vérifiés automatiquement',
+                  'Sync directe avec HubSpot',
+                  '95% d\'emails valides garantis',
+                ].map((item, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', marginBottom: '1rem', color: '#cbd5e1' }}>
+                    <Check style={{ width: '16px', height: '16px', color: '#10b981', flexShrink: 0, marginTop: '4px' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section id="features" style={{ position: 'relative', padding: '6rem 0' }}>
+      <section id="features" style={{ position: 'relative', padding: '6rem 0', background: 'rgba(15, 23, 42, 0.5)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
           <motion.div
             style={{ textAlign: 'center', marginBottom: '4rem' }}
@@ -141,40 +238,49 @@ export default function LandingPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Ce qui change tout</span>
+            <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Fonctionnalités</span>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white', marginBottom: '1rem' }}>
-              Concentrez-vous sur la vente,<br />
-              <span className="text-gradient">pas sur la recherche.</span>
+              Tout ce qu&apos;il faut pour<br />
+              <span className="text-gradient">remplir votre pipeline.</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
-              Hubsy automatise les tâches répétitives pour que vous puissiez vous concentrer sur ce qui compte : closer.
-            </p>
           </motion.div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
             {[
               {
                 icon: Target,
-                title: 'Ciblage précis',
-                description: 'Définissez vos critères et Hubsy trouve les prospects qui correspondent. Secteur, taille, fonction... tout est filtrable.',
+                title: 'Ciblage ultra-précis',
+                description: 'Secteur, taille d\'entreprise, poste, localisation... Définissez votre ICP et trouvez exactement les bons prospects.',
                 featured: true,
               },
               {
                 icon: Mail,
-                title: 'Emails vérifiés',
-                description: 'Chaque email est vérifié en temps réel. Fini les bounces qui ruinent votre réputation d\'expéditeur.',
+                title: 'Emails enrichis et vérifiés',
+                description: 'Chaque email passe par notre système de vérification. Fini les bounces qui ruinent votre réputation.',
                 featured: false,
               },
               {
                 icon: RefreshCw,
-                title: 'Sync CRM automatique',
-                description: 'Vos prospects arrivent directement dans HubSpot. Zéro import, zéro doublon, zéro prise de tête.',
+                title: 'Sync HubSpot automatique',
+                description: 'Vos leads arrivent directement dans votre CRM, avec toutes leurs infos. Zéro saisie manuelle.',
                 featured: false,
               },
               {
                 icon: Shield,
-                title: '100% conforme RGPD',
-                description: 'Enrichissement via Dropcontact = conformité RGPD garantie. Prospectez l\'esprit tranquille.',
+                title: 'Conforme RGPD',
+                description: 'Enrichissement via Dropcontact = 100% conforme RGPD. Prospectez l\'esprit tranquille en Europe.',
+                featured: false,
+              },
+              {
+                icon: Clock,
+                title: 'Campagnes programmées',
+                description: 'Lancez vos campagnes de prospection en quelques clics. Hubsy travaille pendant que vous dormez.',
+                featured: false,
+              },
+              {
+                icon: Zap,
+                title: 'Résultats en temps réel',
+                description: 'Suivez l\'avancement de vos campagnes. Nouveaux leads, emails trouvés, synchro CRM... tout est visible.',
                 featured: false,
               },
             ].map((feature, index) => (
@@ -213,7 +319,7 @@ export default function LandingPage() {
       </section>
 
       {/* How it Works */}
-      <section style={{ position: 'relative', padding: '6rem 0', background: 'rgba(15, 23, 42, 0.5)' }}>
+      <section style={{ position: 'relative', padding: '6rem 0' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
           <motion.div
             style={{ textAlign: 'center', marginBottom: '4rem' }}
@@ -223,7 +329,7 @@ export default function LandingPage() {
           >
             <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Comment ça marche</span>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white' }}>
-              3 étapes. C&apos;est tout.
+              3 étapes. 5 minutes. C&apos;est tout.
             </h2>
           </motion.div>
 
@@ -232,17 +338,17 @@ export default function LandingPage() {
               {
                 step: '01',
                 title: 'Définissez votre cible',
-                description: 'Sélectionnez vos critères : secteur, taille d\'entreprise, poste, localisation. Hubsy s\'occupe du reste.',
+                description: 'Décrivez votre client idéal : secteur d\'activité, taille d\'entreprise, fonction, zone géographique. Soyez aussi précis que vous voulez.',
               },
               {
                 step: '02',
-                title: 'Lancez la prospection',
-                description: 'Hubsy trouve automatiquement les prospects correspondants et enrichit leurs données (email, entreprise...).',
+                title: 'Lancez la campagne',
+                description: 'Un clic suffit. Hubsy part à la recherche de vos prospects, trouve leurs coordonnées et vérifie chaque email en temps réel.',
               },
               {
                 step: '03',
-                title: 'Recevez dans votre CRM',
-                description: 'Les leads arrivent directement dans HubSpot, prêts à être contactés. Vous n\'avez plus qu\'à vendre.',
+                title: 'Recevez vos leads',
+                description: 'Les prospects qualifiés arrivent directement dans HubSpot. Avec leurs infos enrichies. Prêts à être contactés. À vous de jouer.',
               },
             ].map((item, index) => (
               <motion.div
@@ -266,7 +372,7 @@ export default function LandingPage() {
       </section>
 
       {/* Comparison Section */}
-      <section id="comparison" style={{ position: 'relative', padding: '6rem 0' }}>
+      <section id="comparison" style={{ position: 'relative', padding: '6rem 0', background: 'rgba(15, 23, 42, 0.5)' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
           <motion.div
             style={{ textAlign: 'center', marginBottom: '4rem' }}
@@ -274,12 +380,12 @@ export default function LandingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Comparaison</span>
+            <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Comparatif</span>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white', marginBottom: '1rem' }}>
-              Pourquoi Hubsy ?
+              Hubsy vs. la concurrence
             </h2>
             <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>
-              Comparatif objectif face aux outils du marché.
+              Comparaison honnête avec les outils du marché.
             </p>
           </motion.div>
 
@@ -298,18 +404,19 @@ export default function LandingPage() {
                     <th className="col-hubsy" style={{ textAlign: 'center' }}>Hubsy</th>
                     <th style={{ textAlign: 'center' }}>Evaboot</th>
                     <th style={{ textAlign: 'center' }}>Kaspr</th>
-                    <th style={{ textAlign: 'center' }}>Phantombuster</th>
+                    <th style={{ textAlign: 'center' }}>Apollo</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { feature: 'Extraction automatique', hubsy: true, evaboot: true, kaspr: true, phantom: true },
-                    { feature: 'Enrichissement email', hubsy: true, evaboot: true, kaspr: true, phantom: true },
-                    { feature: 'Conforme RGPD', hubsy: true, evaboot: true, kaspr: true, phantom: false },
-                    { feature: 'Intégration CRM native', hubsy: true, evaboot: false, kaspr: true, phantom: true },
-                    { feature: 'Plan gratuit', hubsy: true, evaboot: false, kaspr: true, phantom: false },
-                    { feature: 'Auto-adaptation', hubsy: true, evaboot: false, kaspr: false, phantom: false },
-                    { feature: 'Support français', hubsy: true, evaboot: true, kaspr: true, phantom: false },
+                    { feature: 'Prospection automatisée', hubsy: true, evaboot: true, kaspr: true, apollo: true },
+                    { feature: 'Enrichissement email', hubsy: true, evaboot: true, kaspr: true, apollo: true },
+                    { feature: 'Emails vérifiés (95%+)', hubsy: true, evaboot: false, kaspr: false, apollo: false },
+                    { feature: 'Intégration HubSpot native', hubsy: true, evaboot: false, kaspr: true, apollo: true },
+                    { feature: 'Plan gratuit généreux', hubsy: true, evaboot: false, kaspr: true, apollo: true },
+                    { feature: 'Conforme RGPD (Dropcontact)', hubsy: true, evaboot: true, kaspr: true, apollo: false },
+                    { feature: 'Support en français', hubsy: true, evaboot: true, kaspr: true, apollo: false },
+                    { feature: 'Tarif compétitif', hubsy: true, evaboot: false, kaspr: true, apollo: true },
                   ].map((row, index) => (
                     <tr key={index}>
                       <td style={{ color: 'white', fontWeight: 500 }}>{row.feature}</td>
@@ -335,7 +442,7 @@ export default function LandingPage() {
                         )}
                       </td>
                       <td style={{ textAlign: 'center' }}>
-                        {row.phantom ? (
+                        {row.apollo ? (
                           <Check style={{ width: '20px', height: '20px', color: '#10b981', margin: '0 auto' }} />
                         ) : (
                           <X style={{ width: '20px', height: '20px', color: '#475569', margin: '0 auto' }} />
@@ -349,8 +456,29 @@ export default function LandingPage() {
           </motion.div>
 
           <p style={{ fontSize: '0.875rem', color: '#64748b', marginTop: '1.5rem', textAlign: 'center' }}>
-            * Prix concurrents : Evaboot 29-139€/mois, Kaspr 0-102€/mois, Phantombuster 69-439€/mois
+            Prix moyens du marché : Evaboot 29-139€/mois • Kaspr 0-102€/mois • Apollo 0-149€/mois
           </p>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section style={{ padding: '6rem 0' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
+          <motion.div
+            className="glass-card glass-card-featured"
+            style={{ textAlign: 'center', padding: '3rem' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <p style={{ fontSize: '1.5rem', color: 'white', lineHeight: 1.6, marginBottom: '2rem', fontStyle: 'italic' }}>
+              &ldquo;On passait 15h/semaine à prospecter manuellement. Avec Hubsy, on génère 3x plus de leads en 2h. Nos commerciaux peuvent enfin se concentrer sur la vente.&rdquo;
+            </p>
+            <div>
+              <p style={{ color: 'white', fontWeight: 600 }}>Thomas D.</p>
+              <p style={{ color: '#94a3b8', fontSize: '0.875rem' }}>Head of Sales, SaaS B2B</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -365,22 +493,28 @@ export default function LandingPage() {
           >
             <span className="tag" style={{ marginBottom: '1.5rem', display: 'inline-flex' }}>Tarifs</span>
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white', marginBottom: '1rem' }}>
-              Des prix clairs, sans surprise.
+              Des prix simples et transparents.
             </h2>
             <p style={{ color: '#94a3b8', fontSize: '1.125rem' }}>
-              Commencez gratuitement. Passez à la vitesse supérieure quand vous êtes prêt.
+              Commencez gratuitement. Évoluez quand vous êtes prêt.
             </p>
           </motion.div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
             {[
               {
-                name: 'Gratuit',
+                name: 'Starter',
                 price: '0€',
                 period: '/mois',
-                description: 'Pour tester Hubsy',
-                features: ['50 prospects/mois', '1 campagne active', 'Enrichissement email', 'Support communauté'],
-                cta: 'Commencer',
+                description: 'Pour découvrir Hubsy',
+                features: [
+                  '50 prospects/mois',
+                  '1 campagne active',
+                  'Enrichissement email',
+                  'Export CSV',
+                  'Support communauté',
+                ],
+                cta: 'Commencer gratuitement',
                 featured: false,
               },
               {
@@ -388,25 +522,43 @@ export default function LandingPage() {
                 price: '49€',
                 period: '/mois',
                 description: 'Pour les commerciaux',
-                features: ['500 prospects/mois', 'Campagnes illimitées', 'Intégration HubSpot', 'Support prioritaire', 'Export CSV'],
-                cta: 'Essai 14 jours',
+                features: [
+                  '500 prospects/mois',
+                  'Campagnes illimitées',
+                  'Intégration HubSpot',
+                  'Emails vérifiés 95%+',
+                  'Support prioritaire',
+                ],
+                cta: 'Essai gratuit 14 jours',
                 featured: true,
               },
               {
-                name: 'Équipe',
+                name: 'Team',
                 price: '99€',
-                period: '/siège/mois',
-                description: 'Pour les équipes sales',
-                features: ['2 000 prospects/mois', 'Utilisateurs multiples', 'Analytics avancés', 'Support dédié', 'Accès API'],
+                period: '/utilisateur/mois',
+                description: 'Pour les équipes',
+                features: [
+                  '2 000 prospects/mois',
+                  'Utilisateurs multiples',
+                  'Analytics avancés',
+                  'Accès API',
+                  'Support dédié',
+                ],
                 cta: 'Contacter',
                 featured: false,
               },
               {
-                name: 'Agence',
+                name: 'Agency',
                 price: '299€',
                 period: '/mois',
-                description: '5 clients inclus',
-                features: ['Prospects illimités', 'Gestion multi-comptes', 'White-label disponible', 'Account manager', 'SLA garanti'],
+                description: '5 comptes clients inclus',
+                features: [
+                  'Prospects illimités',
+                  'Multi-comptes clients',
+                  'White-label disponible',
+                  'Account manager',
+                  'SLA garanti',
+                ],
                 cta: 'Contacter',
                 featured: false,
               },
@@ -448,8 +600,57 @@ export default function LandingPage() {
           </div>
 
           <p style={{ textAlign: 'center', fontSize: '0.875rem', color: '#64748b', marginTop: '2rem' }}>
-            Tous les prix sont HT. Facturation annuelle -20%.
+            Tous les prix sont HT. -20% sur la facturation annuelle.
           </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ padding: '6rem 0' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
+          <motion.div
+            style={{ textAlign: 'center', marginBottom: '4rem' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white' }}>
+              Questions fréquentes
+            </h2>
+          </motion.div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {[
+              {
+                q: 'Est-ce que Hubsy est conforme au RGPD ?',
+                a: 'Oui, 100%. On utilise Dropcontact pour l\'enrichissement, qui ne stocke aucune donnée personnelle. Vos campagnes de prospection B2B sont conformes à la réglementation européenne.',
+              },
+              {
+                q: 'Combien de temps faut-il pour démarrer ?',
+                a: 'Moins de 5 minutes. Créez votre compte, définissez votre cible, lancez votre première campagne. C\'est aussi simple que ça.',
+              },
+              {
+                q: 'Quelles intégrations CRM sont disponibles ?',
+                a: 'HubSpot est intégré nativement. Salesforce et Pipedrive arrivent bientôt. En attendant, vous pouvez toujours exporter vos leads en CSV.',
+              },
+              {
+                q: 'Pourquoi 95% d\'emails valides et pas 100% ?',
+                a: 'Parce qu\'on est honnêtes. Le marché change constamment. On vérifie chaque email en temps réel, mais un taux de 95%+ est déjà exceptionnel comparé à la moyenne du marché (75-80%).',
+              },
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                className="glass-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <h3 style={{ color: 'white', fontWeight: 600, marginBottom: '0.75rem' }}>{faq.q}</h3>
+                <p style={{ color: '#94a3b8', lineHeight: 1.6 }}>{faq.a}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -463,7 +664,7 @@ export default function LandingPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <BarChart3 style={{ width: '48px', height: '48px', color: '#22d3ee', margin: '0 auto 1.5rem' }} />
+            <Users style={{ width: '48px', height: '48px', color: '#22d3ee', margin: '0 auto 1.5rem' }} />
             <h2 className="font-display" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: 'white', marginBottom: '1.5rem' }}>
               Prêt à remplir votre pipeline ?
             </h2>
@@ -475,7 +676,7 @@ export default function LandingPage() {
                 Démarrer gratuitement
                 <ArrowRight style={{ width: '16px', height: '16px' }} />
               </button>
-              <span style={{ color: '#64748b', fontSize: '0.875rem' }}>Sans carte bancaire</span>
+              <span style={{ color: '#64748b', fontSize: '0.875rem' }}>Sans carte bancaire • 50 prospects offerts</span>
             </div>
           </motion.div>
         </div>
@@ -512,7 +713,7 @@ export default function LandingPage() {
               © {new Date().getFullYear()} Hubsy. Tous droits réservés.
             </p>
             <p style={{ fontSize: '0.875rem', color: '#64748b' }}>
-              Enrichissement conforme RGPD par Dropcontact
+              Enrichissement RGPD par Dropcontact
             </p>
           </div>
         </div>
