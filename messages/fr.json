@@ -1,0 +1,203 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "comparison": "Comparaison",
+    "pricing": "Tarifs",
+    "login": "Connexion",
+    "cta": "Essai gratuit"
+  },
+  "hero": {
+    "tag": "Prospection automatique",
+    "headline": "Vos prospects arrivent tout seuls.",
+    "headlineAccent": "Vous n'avez qu'à closer.",
+    "subheadline": "Hubsy trouve vos prospects, vérifie leurs emails et les envoie dans votre CRM. Automatiquement. 24h/24.",
+    "ctaPrimary": "Commencer gratuitement",
+    "ctaSecondary": "Réserver une démo"
+  },
+  "stats": {
+    "items": [
+      { "value": "1 clic", "label": "pour lancer" },
+      { "value": "95%", "label": "emails valides" },
+      { "value": "24/7", "label": "ça tourne tout seul" }
+    ]
+  },
+  "socialProof": "Rejoignez les <strong>{count}</strong> équipes qui reçoivent leurs leads automatiquement",
+  "problem": {
+    "title": "Arrêtez de perdre du temps",
+    "titleAccent": "sur la prospection manuelle.",
+    "subtitle": "Vous passez des heures à chercher des prospects ? À jongler entre 10 outils ? C'est fini.",
+    "before": "Avant Hubsy",
+    "beforeItems": [
+      "15-20h/semaine de recherche manuelle",
+      "Outils compliqués à configurer",
+      "Import manuel dans le CRM",
+      "30% d'emails invalides",
+      "Prospection qui s'arrête le week-end"
+    ],
+    "after": "Avec Hubsy",
+    "afterItems": [
+      "Lancez une campagne en 1 clic",
+      "Simple comme envoyer un email",
+      "Sync automatique avec votre CRM",
+      "95% d'emails vérifiés",
+      "Tourne 24/7, même le dimanche"
+    ]
+  },
+  "features": {
+    "tag": "Fonctionnalités",
+    "title": "Tout ce qu'il faut pour",
+    "titleAccent": "remplir votre pipeline.",
+    "items": [
+      {
+        "title": "Ciblage simple",
+        "description": "Décrivez votre client idéal. Hubsy trouve les bons profils automatiquement."
+      },
+      {
+        "title": "Emails vérifiés",
+        "description": "Chaque email est vérifié. 95% de validité. Fini les bounces."
+      },
+      {
+        "title": "Sync CRM automatique",
+        "description": "Vos leads arrivent dans votre CRM avec toutes leurs infos. Zéro copier-coller."
+      },
+      {
+        "title": "Données sécurisées",
+        "description": "Vos données et celles de vos prospects sont protégées. Prospectez l'esprit tranquille."
+      },
+      {
+        "title": "Tourne tout seul",
+        "description": "Lancez une campagne, partez en week-end. Hubsy continue sans vous."
+      },
+      {
+        "title": "Résultats en direct",
+        "description": "Suivez vos campagnes en temps réel. Nouveaux leads, emails trouvés, tout est visible."
+      }
+    ]
+  },
+  "howItWorks": {
+    "tag": "Comment ça marche",
+    "title": "3 étapes. 5 minutes. C'est tout.",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Décrivez votre cible",
+        "description": "Secteur, taille d'entreprise, fonction. En 2 minutes c'est réglé."
+      },
+      {
+        "step": "02",
+        "title": "Lancez la campagne",
+        "description": "Un clic. C'est parti. Hubsy se met au travail."
+      },
+      {
+        "step": "03",
+        "title": "Recevez vos leads",
+        "description": "Les prospects qualifiés arrivent dans votre CRM. À vous de closer."
+      }
+    ]
+  },
+  "comparison": {
+    "tag": "Comparatif",
+    "title": "Hubsy vs. la concurrence",
+    "subtitle": "Comparaison honnête avec les outils du marché.",
+    "feature": "Fonctionnalité",
+    "features": [
+      { "name": "Prospection automatisée", "hubsy": true, "evaboot": true, "kaspr": true, "apollo": true },
+      { "name": "Enrichissement email", "hubsy": true, "evaboot": true, "kaspr": true, "apollo": true },
+      { "name": "Emails vérifiés (95%+)", "hubsy": true, "evaboot": false, "kaspr": false, "apollo": false },
+      { "name": "Intégration CRM native", "hubsy": true, "evaboot": false, "kaspr": true, "apollo": true },
+      { "name": "Fonctionne 24/7 sans intervention", "hubsy": true, "evaboot": false, "kaspr": false, "apollo": true },
+      { "name": "Lancement en 1 clic", "hubsy": true, "evaboot": true, "kaspr": false, "apollo": false },
+      { "name": "Support en français", "hubsy": true, "evaboot": true, "kaspr": true, "apollo": false },
+      { "name": "Plan gratuit généreux", "hubsy": true, "evaboot": false, "kaspr": true, "apollo": true }
+    ],
+    "priceNote": "Prix du marché : Evaboot 29-139€/mois • Kaspr 0-102€/mois • Apollo 0-149€/mois"
+  },
+  "testimonial": {
+    "quote": "On passait des heures à prospecter. Maintenant on lance une campagne et les leads arrivent tout seuls.",
+    "highlight": "47 RDV en 3 semaines",
+    "author": "Thomas Durand",
+    "role": "Head of Sales, TechFlow (SaaS B2B)"
+  },
+  "pricing": {
+    "tag": "Tarifs",
+    "title": "Des prix simples et transparents.",
+    "subtitle": "Commencez gratuitement. Évoluez quand vous êtes prêt.",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "0€",
+        "period": "/mois",
+        "description": "Pour découvrir Hubsy",
+        "roi": "~5 RDV/mois",
+        "features": ["50 prospects/mois", "1 campagne active", "Enrichissement email", "Export CSV", "Support communauté"],
+        "cta": "Commencer gratuitement",
+        "featured": false
+      },
+      {
+        "name": "Pro",
+        "price": "49€",
+        "period": "/mois",
+        "description": "Pour les commerciaux",
+        "roi": "~25 RDV/mois",
+        "features": ["500 prospects/mois", "Campagnes illimitées", "Intégration CRM", "Emails vérifiés 95%+", "Support prioritaire"],
+        "cta": "Essai gratuit 14 jours",
+        "featured": true
+      },
+      {
+        "name": "Team",
+        "price": "99€",
+        "period": "/utilisateur/mois",
+        "description": "Pour les équipes",
+        "roi": "~100 RDV/mois",
+        "features": ["2 000 prospects/mois", "Utilisateurs multiples", "Analytics avancés", "Accès API", "Support dédié"],
+        "cta": "Contacter",
+        "featured": false
+      },
+      {
+        "name": "Agency",
+        "price": "299€",
+        "period": "/mois",
+        "description": "5 comptes clients inclus",
+        "roi": "RDV illimités",
+        "features": ["Prospects illimités", "Multi-comptes clients", "White-label disponible", "Account manager", "SLA garanti"],
+        "cta": "Contacter",
+        "featured": false
+      }
+    ],
+    "note": "Tous les prix sont HT. -20% sur la facturation annuelle."
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "q": "Combien de temps pour démarrer ?",
+        "a": "Moins de 5 minutes. Créez votre compte, décrivez votre cible, lancez. C'est tout."
+      },
+      {
+        "q": "C'est vraiment automatique ?",
+        "a": "Oui. Une fois la campagne lancée, Hubsy tourne tout seul. Vous recevez vos leads sans rien faire."
+      },
+      {
+        "q": "Quels CRM sont compatibles ?",
+        "a": "HubSpot, Salesforce et Pipedrive. Export CSV aussi si vous préférez."
+      },
+      {
+        "q": "Pourquoi 95% d'emails valides ?",
+        "a": "On vérifie chaque email en temps réel. C'est bien au-dessus de la moyenne du marché (75-80%)."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à remplir votre pipeline ?",
+    "subtitle": "Rejoignez les équipes commerciales qui génèrent des leads qualifiés en automatique.",
+    "button": "Démarrer gratuitement",
+    "note": "Sans carte bancaire • 50 prospects offerts"
+  },
+  "footer": {
+    "privacy": "Confidentialité",
+    "terms": "CGU",
+    "contact": "Contact",
+    "rights": "Tous droits réservés.",
+    "madeIn": "Fait avec amour en France"
+  }
+}
