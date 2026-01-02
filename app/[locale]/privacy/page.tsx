@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import { useLocale } from 'next-intl';
 import AnimatedBackground from '@/components/AnimatedBackground';
 
 export default function PrivacyPage() {
+  const locale = useLocale();
   return (
     <div style={{ minHeight: '100vh', position: 'relative' }}>
       <AnimatedBackground />
@@ -11,7 +13,7 @@ export default function PrivacyPage() {
       {/* Header */}
       <header style={{ padding: '1.5rem 0', borderBottom: '1px solid #292524' }}>
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '0 2rem' }}>
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
+          <Link href={`/${locale}`} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
             <div style={{
               width: '36px',
               height: '36px',
@@ -71,7 +73,7 @@ export default function PrivacyPage() {
         </div>
 
         <div style={{ marginTop: '4rem', paddingTop: '2rem', borderTop: '1px solid #292524' }}>
-          <Link href="/" style={{ color: '#a8a29e', fontSize: '0.875rem' }}>&larr; Back to home</Link>
+          <Link href={`/${locale}`} style={{ color: '#a8a29e', fontSize: '0.875rem' }}>&larr; Back to home</Link>
         </div>
       </main>
     </div>

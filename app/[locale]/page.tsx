@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import {
   ArrowRight,
   Check,
@@ -24,6 +25,7 @@ const featureIcons = [Target, Mail, RefreshCw, Shield, Clock, Zap];
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const t = useTranslations();
+  const locale = useLocale();
 
   const statsItems = t.raw('stats.items') as Array<{ value: string; label: string }>;
   const beforeItems = t.raw('problem.beforeItems') as string[];
@@ -619,8 +621,8 @@ export default function LandingPage() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <a href="/privacy" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.privacy')}</a>
-              <a href="/terms" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.terms')}</a>
+              <Link href={`/${locale}/privacy`} style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.privacy')}</Link>
+              <Link href={`/${locale}/terms`} style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.terms')}</Link>
               <a href="mailto:contact@hubsy.io" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.contact')}</a>
               <LanguageSwitcher />
             </div>
