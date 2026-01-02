@@ -30,7 +30,7 @@ export default function LandingPage() {
   const featuresItems = t.raw('features.items') as Array<{ title: string; description: string }>;
   const howItWorksSteps = t.raw('howItWorks.steps') as Array<{ step: string; title: string; description: string }>;
   const comparisonFeatures = t.raw('comparison.features') as Array<{ name: string; hubsy: boolean; evaboot: boolean; kaspr: boolean; apollo: boolean }>;
-  const pricingPlans = t.raw('pricing.plans') as Array<{ name: string; price: string; period: string; description: string; roi: string; features: string[]; cta: string; featured: boolean }>;
+  const pricingPlans = t.raw('pricing.plans') as Array<{ name: string; price: string; period: string; description: string; features: string[]; cta: string; featured: boolean }>;
   const faqItems = t.raw('faq.items') as Array<{ q: string; a: string }>;
 
   return (
@@ -90,7 +90,6 @@ export default function LandingPage() {
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <LanguageSwitcher />
             <a href="#" className="nav-links" style={{ fontSize: '0.875rem', color: '#a8a29e', textDecoration: 'none' }}>{t('nav.login')}</a>
             <button className="btn-primary nav-links" style={{ padding: '0.625rem 1.25rem', fontSize: '0.875rem' }}>
               {t('nav.cta')}
@@ -518,10 +517,6 @@ export default function LandingPage() {
                   <span style={{ fontSize: '0.8125rem', color: '#78716c' }}>{plan.period}</span>
                 </div>
 
-                <div className="roi-badge" style={{ marginBottom: '1.5rem' }}>
-                  {plan.roi}
-                </div>
-
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, marginBottom: '1.5rem', flex: 1 }}>
                   {plan.features.map((feature, i) => (
                     <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.625rem', fontSize: '0.8125rem', marginBottom: '0.625rem' }}>
@@ -627,6 +622,7 @@ export default function LandingPage() {
               <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.privacy')}</a>
               <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.terms')}</a>
               <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.contact')}</a>
+              <LanguageSwitcher />
             </div>
           </div>
 

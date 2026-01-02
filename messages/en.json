@@ -17,7 +17,7 @@
   "stats": {
     "items": [
       { "value": "1 click", "label": "to launch" },
-      { "value": "95%", "label": "valid emails" },
+      { "value": "✓", "label": "verified emails" },
       { "value": "24/7", "label": "runs by itself" }
     ]
   },
@@ -39,7 +39,7 @@
       "Launch a campaign in 1 click",
       "Simple as sending an email",
       "Automatic CRM sync",
-      "95% verified emails",
+      "Verified emails",
       "Runs 24/7, even on Sundays"
     ]
   },
@@ -54,7 +54,7 @@
       },
       {
         "title": "Verified emails",
-        "description": "Every email is verified. 95% validity. No more bounces."
+        "description": "Every email is verified before delivery. No more bounces."
       },
       {
         "title": "Automatic CRM sync",
@@ -103,7 +103,7 @@
     "features": [
       { "name": "Automated prospecting", "hubsy": true, "evaboot": true, "kaspr": true, "apollo": true },
       { "name": "Email enrichment", "hubsy": true, "evaboot": true, "kaspr": true, "apollo": true },
-      { "name": "Verified emails (95%+)", "hubsy": true, "evaboot": false, "kaspr": false, "apollo": false },
+      { "name": "Verified emails", "hubsy": true, "evaboot": false, "kaspr": false, "apollo": false },
       { "name": "Native CRM integration", "hubsy": true, "evaboot": false, "kaspr": true, "apollo": true },
       { "name": "Works 24/7 unattended", "hubsy": true, "evaboot": false, "kaspr": false, "apollo": true },
       { "name": "1-click launch", "hubsy": true, "evaboot": true, "kaspr": false, "apollo": false },
@@ -128,7 +128,6 @@
         "price": "€0",
         "period": "/month",
         "description": "Discover Hubsy",
-        "roi": "~5 meetings/mo",
         "features": ["50 prospects/month", "1 active campaign", "Email enrichment", "CSV export", "Community support"],
         "cta": "Start for free",
         "featured": false
@@ -138,8 +137,7 @@
         "price": "€49",
         "period": "/month",
         "description": "For sales reps",
-        "roi": "~25 meetings/mo",
-        "features": ["500 prospects/month", "Unlimited campaigns", "CRM integration", "95%+ verified emails", "Priority support"],
+        "features": ["500 prospects/month", "Unlimited campaigns", "CRM integration", "Qualified & verified emails", "Priority support"],
         "cta": "14-day free trial",
         "featured": true
       },
@@ -148,7 +146,6 @@
         "price": "€99",
         "period": "/user/month",
         "description": "For teams",
-        "roi": "~100 meetings/mo",
         "features": ["2,000 prospects/month", "Multiple users", "Advanced analytics", "API access", "Dedicated support"],
         "cta": "Contact us",
         "featured": false
@@ -158,7 +155,6 @@
         "price": "€299",
         "period": "/month",
         "description": "5 client accounts included",
-        "roi": "Unlimited meetings",
         "features": ["Unlimited prospects", "Multi-client accounts", "White-label available", "Account manager", "Guaranteed SLA"],
         "cta": "Contact us",
         "featured": false
@@ -182,8 +178,8 @@
         "a": "HubSpot, Salesforce and Pipedrive. CSV export too if you prefer."
       },
       {
-        "q": "Why 95% valid emails?",
-        "a": "We verify each email in real-time. That's well above the market average (75-80%)."
+        "q": "How are emails verified?",
+        "a": "We verify each email in real-time before delivery. This ensures your emails reach real inboxes."
       }
     ]
   },
