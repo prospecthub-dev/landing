@@ -619,19 +619,16 @@ export default function LandingPage() {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-              <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.privacy')}</a>
-              <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.terms')}</a>
-              <a href="#" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.contact')}</a>
+              <a href="/privacy" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.privacy')}</a>
+              <a href="/terms" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.terms')}</a>
+              <a href="mailto:contact@hubsy.io" style={{ fontSize: '0.8125rem', color: '#78716c', textDecoration: 'none' }}>{t('footer.contact')}</a>
               <LanguageSwitcher />
             </div>
           </div>
 
-          <div style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid #292524', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
-            <p style={{ fontSize: '0.8125rem', color: '#78716c' }}>
+          <div style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid #292524' }}>
+            <p style={{ fontSize: '0.8125rem', color: '#78716c', textAlign: 'center' }}>
               © {new Date().getFullYear()} Hubsy. {t('footer.rights')}
-            </p>
-            <p style={{ fontSize: '0.8125rem', color: '#78716c' }}>
-              {t('footer.madeIn')}
             </p>
           </div>
         </div>
