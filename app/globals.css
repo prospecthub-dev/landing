@@ -349,13 +349,6 @@ body {
   }
 }
 
-/* Subtle grid - very faint */
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 80px 80px;
-}
 
 /* Accent line decoration */
 .accent-line {

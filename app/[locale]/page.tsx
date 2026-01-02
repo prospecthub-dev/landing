@@ -17,6 +17,7 @@ import {
   Calendar,
 } from 'lucide-react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import AnimatedBackground from '@/components/AnimatedBackground';
 
 const featureIcons = [Target, Mail, RefreshCw, Shield, Clock, Zap];
 
@@ -35,8 +36,7 @@ export default function LandingPage() {
 
   return (
     <div style={{ minHeight: '100vh', position: 'relative' }}>
-      {/* Subtle Background Grid */}
-      <div className="grid-bg" style={{ position: 'fixed', inset: 0, pointerEvents: 'none' }} />
+      <AnimatedBackground />
 
       {/* Mobile Menu */}
       <AnimatePresence>
